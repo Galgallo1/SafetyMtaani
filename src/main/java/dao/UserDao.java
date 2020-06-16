@@ -1,6 +1,5 @@
 package dao;
 
-import models.Police;
 import models.User;
 
 import java.util.List;

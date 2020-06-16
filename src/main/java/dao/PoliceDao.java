@@ -2,7 +2,6 @@ package dao;
 
 import javafx.application.Application;
 import javafx.stage.Stage;
-import models.Police;
 import org.sql2o.Query;
 
 import java.util.List;
