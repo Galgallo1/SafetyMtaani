@@ -2,6 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7c36c076-7ff2-4147-a303-1b10668f7597" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/Crime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/Crime.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/dao/Sql2oCrimeDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/model/dao/Sql2oCrimeDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/DB/database.sql" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/DB/database.sql" afterDir="false" />
@@ -21,6 +23,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="JUnit4 Test Class" />
       </list>
     </option>
   </component>
@@ -31,6 +34,8 @@
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary" value="JUnit4" />
+    <property name="com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit4" value="" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />

@@ -1,16 +1,18 @@
 package model;
 
 import java.sql.Timestamp;
+import java.time.LocalDateTime;
+import java.util.ArrayList;
 import java.util.Objects;
 
 public class Crime {
-
+    private static ArrayList<Crime> crimeInstances = new ArrayList<>();
     private int id;
     private String crime;
     private String location;
     private String reportedBy;
     private int contact;
-    private Timestamp time;
+    private LocalDateTime createdAt;
     private boolean status;
 
     public Crime(int id, String crime, String location, String reportedBy, int contact) {
@@ -19,7 +21,8 @@ public class Crime {
         this.location = location;
         this.reportedBy = reportedBy;
         this.contact = contact;
-        this.time = time;
+        this.id= crimeInstances.size();
+        this.createdAt = LocalDateTime.now();
         this.status = false;
     }
 
@@ -63,12 +66,20 @@ public class Crime {
         this.contact = contact;
     }
 
-    public Timestamp getTime() {
-        return time;
+    public static ArrayList<Crime> getCrimeInstances() {
+        return crimeInstances;
     }
 
-    public void setTime(Timestamp time) {
-        this.time = time;
+    public static void setCrimeInstances(ArrayList<Crime> crimeInstances) {
+        Crime.crimeInstances = crimeInstances;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
     }
 
     public boolean isStatus() {
@@ -90,11 +101,11 @@ public class Crime {
                 Objects.equals(crime, crime1.crime) &&
                 Objects.equals(location, crime1.location) &&
                 Objects.equals(reportedBy, crime1.reportedBy) &&
-                Objects.equals(time, crime1.time);
+                Objects.equals(createdAt, crime1.createdAt);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, crime, location, reportedBy, contact, time, status);
+        return Objects.hash(id, crime, location, reportedBy, contact, createdAt, status);
     }
 }
