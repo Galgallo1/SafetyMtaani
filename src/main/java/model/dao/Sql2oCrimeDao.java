@@ -16,7 +16,7 @@ public class Sql2oCrimeDao implements CrimeDao{
 
     @Override
     public void Add(Crime crime) {
-    String sql = "INSERT INTO crimes(id, crime, location, reportedBy, contact) VALUES(:id, :crime, :location, :reportedBy, :contact)";
+    String sql = "INSERT INTO crimes( crime, location, reportedBy, contact) VALUES( :crime, :location, :reportedBy, :contact)";
     try(Connection con = sql2o.open()){
         con.createQuery(sql)
                 .bind(crime)
@@ -27,12 +27,12 @@ public class Sql2oCrimeDao implements CrimeDao{
 
     @Override
     public List<Crime> getAll() {
-        String sql = "SELECT* FROM crimes";
+        String sql = "SELECT * FROM crimes";
         try(Connection con = sql2o.open()){
-            con.createQuery(sql)
+            return con.createQuery(sql)
                     .executeAndFetch(Crime.class);
         }
 
-        return null;
+
     }
 }

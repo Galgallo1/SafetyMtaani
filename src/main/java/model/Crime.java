@@ -1,6 +1,4 @@
 package model;
-
-import java.sql.Timestamp;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Objects;
@@ -15,8 +13,7 @@ public class Crime {
     private LocalDateTime createdAt;
     private boolean status;
 
-    public Crime(int id, String crime, String location, String reportedBy, int contact) {
-        this.id = id;
+    public Crime(String crime, String location, String reportedBy, int contact) {
         this.crime = crime;
         this.location = location;
         this.reportedBy = reportedBy;
