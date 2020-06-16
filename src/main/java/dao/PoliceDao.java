@@ -11,11 +11,7 @@ public class PoliceDao extends Application {
 
     private static class Police;
 
-    private static class Police;
-
-    private class Police;
-
-    public static void main(String[] args) {
+         public static void main(String[] args) {
         launch(args);
     }
 
