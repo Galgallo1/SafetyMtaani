@@ -1,5 +1,6 @@
 package dao;
 
+import models.Police;
 import models.User;
 import org.sql2o.Connection;
 import org.sql2o.Sql2o;
@@ -27,7 +28,7 @@ public class Sql2oUserDao implements UserDao{
     }
 
     @Override
-    public List<User> getAll() {
+    public List<Police> getAll() {
         try(Connection connection = sql2o.open()) {
             return connection.createQuery("SELECT * FROM users")
                     .executeAndFetch(User.class);

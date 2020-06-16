@@ -1,5 +1,6 @@
 package dao;
 
+import models.Police;
 import models.User;
 
 import java.util.List;
@@ -10,6 +11,6 @@ public interface UserDao {
     void add(User user);
 
     //get all users
-    List<User> getAll();
+    List<Police> getAll();
 
 }
