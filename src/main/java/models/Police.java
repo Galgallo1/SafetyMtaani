@@ -35,7 +35,7 @@ public class Police<string> {
     public void getsNameInput() {
         Police<String> police = new Police<>("fights corruption", "Nairobi", "271-556", "Mark","True");
         assertEquals("Mark", police.getsNameInput()
-}
+    }
     @Test
     public void getsAgeInput() {
         Police<String> police = new Police< string>("fights corruption", "Nairobi","271-556", 1,"True",)
