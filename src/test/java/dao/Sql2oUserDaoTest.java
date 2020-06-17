@@ -30,7 +30,25 @@ public class Sql2oUserDaoTest {
     public void add() {
         User user = setUpAssistant();
         userDao.add(user);
-        assertEquals(1, userDao.getAll().size());
+        assertEquals(1 , userDao.getAll().size());
+    }
+
+    @Test
+    public void getAll(){
+        User user= setUpAssistant();
+        userDao.add(user);
+        User user1 = setUpAssistant();
+        userDao.add(user1);
+        assertEquals(2, userDao.getAll().size());
+    }
+
+    @Test
+    public void findById(){
+        User user = setUpAssistant();
+        userDao.add(user);
+        User user1 = setUpAssistant();
+        userDao.add(user1);
+        assertEquals(userDao.findById(user1.getId()), user1);
     }
 
 
