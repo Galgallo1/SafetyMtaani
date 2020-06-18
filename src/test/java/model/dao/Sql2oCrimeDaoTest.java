@@ -15,7 +15,7 @@ public class Sql2oCrimeDaoTest {
 
     @Before
     public void setUp() throws Exception {
-        String connectionString = "jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:DB/database.sql'";
+        String connectionString = "jdbc:h2:mem:testing;INIT=RUNSCRIPT from 'classpath:db/database.sql'";
         Sql2o sql2o = new Sql2o(connectionString, "", "");
         crimeDao = new Sql2oCrimeDao(sql2o);
         connection = sql2o.open();

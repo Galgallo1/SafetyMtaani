@@ -1,0 +1,26 @@
+{{#partial "content"}}
+    <form action="/new-crime" method="post">
+        <div class="form-group">
+            //crime, location, reportedBy, contact
+            <label for="crime">Crime</label>
+            <input type="text" class="form-control"  name="crime" id="crime" aria-describedby="emailHelp" placeholder="Enter crime you spotted" required>
+        </div>
+        <div class="form-group">
+            <label for="location">Location of occurrence</label>
+            <input type="text" class="form-control"  name="location" id="location" aria-describedby="emailHelp" placeholder="Enter location of occurrence" required>
+        </div>
+        <div class="form-group">
+            <label for="reportedBy">Reported By</label>
+            <input type="text" class="form-control" name="reportedBy" id="reportedBy" aria-describedby="emailHelp" placeholder="Enter your name(s)" required>
+        </div>
+        <div class="form-group">
+            <label for="contact">Help us follow up by leaving us your contact</label>
+            <input type="number" class="form-control" name="contact" id="contact" aria-describedby="emailHelp" placeholder="Enter your contact details" required>
+        </div>
+
+        <button class="btn btn-primary">Submit</button>
+    </form>
+
+
+{{/partial}}
+{{> layout.hbs}}
